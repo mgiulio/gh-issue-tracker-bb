@@ -1,5 +1,5 @@
 body {
-	background: gray;
+	background: #cecece;
 }
 
 #toolbar {
@@ -16,5 +16,17 @@ body {
 	padding: 10px;
 	width: 500px;
 
-	background: #f0f0f0;
+	background: #d9d9d9;
+	box-shadow: 1px 1px 2px 2px rgba(0,0,0, 0.4);
+}
+
+.item {
+	padding: 10px;
+	background: #eee;
+	color: #9d9d9d;
+	margin-bottom: 10px;
+	border-radius: 7px;
+}
+.item:last-child {
+	margin-bottom: none;
 }
