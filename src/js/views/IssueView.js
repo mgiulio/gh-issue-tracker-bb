@@ -1,8 +1,8 @@
 var IssueView = Backbone.View.extend({
 	
-	tagName: "li",
-	className: "item",
-	template: _.template('<%= title %>'),
+	tagName: 'li',
+	className: 'item',
+	template: tmpl['item'],
 
 	events: {
 		//"click .icon": "open",
