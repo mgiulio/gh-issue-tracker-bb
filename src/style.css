@@ -39,6 +39,10 @@ body {
 .item:last-child {
 	margin-bottom: none;
 }
+.item .title a {
+	text-decoration: none;
+	color: inherit;
+}
 .item.closed {
 	opacity: 0.5;
 }
