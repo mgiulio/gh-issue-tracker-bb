@@ -2,7 +2,10 @@ var tmpl = (function() {
 		
 	var tmpl = {
 			item: m => `
-				<h2 class="title"><a target="_blank" href="${m.html_url}">${m.title}</a></h2>
+				<h2 class="title">
+					<a target="_blank" href="${m.html_url}">${m.title}</a>
+					<span class="number">${m.number}</span>
+				</h2>
 			`
 		}
 	;

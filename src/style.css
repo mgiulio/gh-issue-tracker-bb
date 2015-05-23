@@ -49,3 +49,11 @@ body {
 .item.closed .title {
 	text-decoration: line-through;
 }
+.item .title .number {
+	float: left;
+	margin-right: 10px;
+	color: #bbb;
+}
+.item .title .number:before {
+	content: '#';
+}
