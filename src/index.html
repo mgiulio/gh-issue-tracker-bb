@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>A GitHub Issue Tracker with Backbone.js</title>
+	<meta name="description" content="A GitHub Issue Tracker with Backbone.js">
+    <meta name="author" content="mgiulio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" type="text/css" media="all" href="style.css"> -->
+</head>
+
+<body>
+	<header id="toolbar">
+	</header>
+	
+	<div id="lists">
+		<section id="list">
+			<header>
+				<input class="repo" type="text" placeholder="repo">
+			</header>
+			<ul class="items"></ul>
+			<footer></footer>
+		</section>
+	</div>
+	
+	<script src="js/lib/underscore.js"></script>
+	<script src="js/lib/jquery.js"></script>
+	<script src="js/lib/backbone.js"></script>
+	
+	<script src="js/models/Issue.js"></script>
+	<script src="js/models/Issues.js"></script>
+	
+	<script src="js/views/IssueView.js"></script>
+	<script src="js/views/IssuesView.js"></script>
+	
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>
