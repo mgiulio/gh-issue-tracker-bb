@@ -13,6 +13,11 @@ var IssueView = Backbone.View.extend({
 	},
 
 	render: function() {
+		if (this.model.get('state') === 'closed')
+			this.el.classList.add('closed');
+		else
+			this.el.classList.remove('closed');
+		
 		this.$el.html(this.template(this.model.toJSON()));
 		
 		return this;

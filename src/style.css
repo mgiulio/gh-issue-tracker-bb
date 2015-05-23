@@ -32,3 +32,9 @@ body {
 .item:last-child {
 	margin-bottom: none;
 }
+.item.closed {
+	opacity: 0.5;
+}
+.item.closed .title {
+	text-decoration: line-through;
+}
