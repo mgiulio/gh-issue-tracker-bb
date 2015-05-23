@@ -4,32 +4,17 @@ var IssuesView = Backbone.View.extend({
 
 	initialize: function() {
 		this.listenTo(this.collection, 'sync', this.render);
-		this.list = this.$('.items')
+		this.list = this.$('.items');
 	},
 
 	render: function() {
 		this.list.empty();
 		
 		this.collection.each(function(m) {
-			var issueView = new IssueView({model: m});
-			this.list.append(issueView.render().$el);
+			this.list.append(new IssueView({model: m}).render().$el);
 		}, this);
 	
 		return this;
-	},
-	
-	events: {
-		'change .repo': 'onChangeRepo',
-	},
-	
-	onChangeRepo: function(e) {
-		var repoName = e.currentTarget.value;
-		
-		/* if (!this.validRepoName(repoName))
-			return; */
-		
-		this.collection.setRepo(repoName);
-		this.collection.fetch();
 	}
-
+	
 });

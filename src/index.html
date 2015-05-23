@@ -8,22 +8,20 @@
 	<meta name="description" content="A GitHub Issue Tracker with Backbone.js">
     <meta name="author" content="mgiulio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" type="text/css" media="all" href="style.css"> -->
+	<link rel="stylesheet" type="text/css" media="all" href="style.css">
 </head>
 
 <body>
 	<header id="toolbar">
+		<input class="repo" type="text" placeholder="repo">
 	</header>
 	
-	<div id="lists">
-		<section id="list">
-			<header>
-				<input class="repo" type="text" placeholder="repo">
-			</header>
-			<ul class="items"></ul>
-			<footer></footer>
-		</section>
-	</div>
+	<section id="list">
+		<header>
+		</header>
+		<ul class="items"></ul>
+		<footer></footer>
+	</section>
 	
 	<script src="js/lib/underscore.js"></script>
 	<script src="js/lib/jquery.js"></script>
@@ -34,6 +32,7 @@
 	
 	<script src="js/views/IssueView.js"></script>
 	<script src="js/views/IssuesView.js"></script>
+	<script src="js/views/ToolbarView.js"></script>
 	
 	<script src="js/bootstrap.js"></script>
 </body>
