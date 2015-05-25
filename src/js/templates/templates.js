@@ -6,6 +6,9 @@ var tmpl = (function() {
 					<a target="_blank" href="${m.html_url}">${m.title}</a>
 					<span class="number">${m.number}</span>
 				</h2>
+				<p class="meta">
+					<span class="created-at">${ date(m.created_at) }</span>
+				</p>
 			`
 		}
 	;
