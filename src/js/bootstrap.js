@@ -4,9 +4,13 @@ function bootstrap() {
 	
 	issues = new Issues(/* null , {repo: 'mgiulio/mgiulio.github.io'} */);
 	
-	new IssuesView({
+	issuesView = new IssuesView({
 		collection: issues
 	});
 	
-	new ToolbarView();
+	toolbarView = new ToolbarView();
+	
+	document.querySelector('input.repo').value = 'jashkenas/backbone';
+	//toolbarView.onChangeRepo();
+	issues.setRepo('jashkenas/backbone');
 }
