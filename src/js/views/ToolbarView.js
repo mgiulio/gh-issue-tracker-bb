@@ -20,7 +20,6 @@ var ToolbarView = Backbone.View.extend({
 			return; */
 		
 		issues.setRepo(repoName);
-		issues.fetch();
 	}
 
 });

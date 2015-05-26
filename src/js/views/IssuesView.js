@@ -3,8 +3,15 @@ var IssuesView = Backbone.View.extend({
 	el: '#list',
 
 	initialize: function() {
-		this.listenTo(this.collection, 'sync', this.render);
 		this.list = this.$('.items');
+		
+		this.listenTo(this.collection, 'sync', this.render);
+		
+		/* scrollWatcher
+			.setDistance(400)
+			.on(this.onNewPage)
+			.enable()
+		; */
 	},
 
 	render: function() {
@@ -15,6 +22,10 @@ var IssuesView = Backbone.View.extend({
 		}, this);
 	
 		return this;
+	},
+	
+	onNewPage: function() {
+		this.collection.fetchNextPage();
 	}
 	
 });
