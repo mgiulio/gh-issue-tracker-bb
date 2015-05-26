@@ -7,11 +7,10 @@ var IssuesView = Backbone.View.extend({
 		
 		this.listenTo(this.collection, 'sync', this.render);
 		
-		/* scrollWatcher
-			.setDistance(400)
-			.on(this.onNewPage)
-			.enable()
-		; */
+		scrollWatcher
+			.setThreshold(400)
+			.on(this.onNewPage.bind(this))
+		;
 	},
 
 	render: function() {
@@ -20,6 +19,8 @@ var IssuesView = Backbone.View.extend({
 		this.collection.each(function(m) {
 			this.list.append(new IssueView({model: m}).render().$el);
 		}, this);
+		
+		scrollWatcher.enable();
 	
 		return this;
 	},
