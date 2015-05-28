@@ -23,12 +23,19 @@ module.exports = function (grunt) {
 				script: true, //moduleNames: false
 			},
 			main: {
+				// *.js, '**/*.js'
 				files: [{
 					expand: true,
-					cwd: 'src/js/templates',
-					src: ['*.js'], // *.js, '**/*.js'
+					cwd: 'src/js/',
+					src: ['**/*.js'], 
 					dest: 'tmp/traceur'
 				}]
+				/* files: [{
+					expand: true,
+					cwd: 'src/js/templates',
+					src: ['*.js'], 
+					dest: 'tmp/traceur'
+				}] */
 			},
 		},
 		/* concat: {

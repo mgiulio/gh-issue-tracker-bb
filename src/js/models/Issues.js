@@ -19,15 +19,14 @@ var Issues = (function() {
 		fetchNextPage: function() {
 			var nextPageUrl = this.paginationUrls['next'];
 			
-			var self = this;
 			this.fetch({
 				url: nextPageUrl, 
-				success: function(collection, models, options) {
-					self.updatePaginationUrls(options.xhr.getAllResponseHeaders());
-					self.url = nextPageUrl;
+				success: (collection, models, options) => {
+					this.updatePaginationUrls(options.xhr.getAllResponseHeaders());
+					this.url = nextPageUrl;
 				},
-				error: function() {
-					self.fetchNextPage();
+				error: () => {
+					this.fetchNextPage();
 				},
 				remove: false
 			});
@@ -36,12 +35,11 @@ var Issues = (function() {
 		updatePaginationUrls: function(httpHeadersString) {
 			var headers = http.headerObject(httpHeadersString.trim());
 			
-			var self = this;
-			headers['Link'].split(',').forEach(function(link) {
+			headers['Link'].split(',').forEach((link) => {
 				var parts = link.trim().split(';');
 				var url = parts[0].slice(1, -1);
 				var rel = parts[1].trim().split('=')[1].slice(1, -1);
-				self.paginationUrls[rel] = url;
+				this.paginationUrls[rel] = url;
 			});
 		}
 		
