@@ -10,6 +10,8 @@ var IssuesView = Backbone.View.extend({
 		scrollWatcher
 			.setThreshold(400)
 			.on(this.onNewPage.bind(this))
+			.observe(this.list.get(0))
+			.enable()
 		;
 	},
 
@@ -20,7 +22,7 @@ var IssuesView = Backbone.View.extend({
 			this.list.append(new IssueView({model: m}).render().$el);
 		}, this);
 		
-		scrollWatcher.enable();
+		//scrollWatcher.enable();
 	
 		return this;
 	},
