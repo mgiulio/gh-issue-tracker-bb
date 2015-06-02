@@ -15,6 +15,7 @@ var Issues = (function() {
 				'next': `https://api.github.com/repos/${this.repo}/issues?state=all`
 			};
 			
+			this.reset();
 			this.fetchNextPage();
 		},
 		
