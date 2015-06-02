@@ -12,5 +12,8 @@ function bootstrap() {
 	
 	document.querySelector('input.repo').value = 'jashkenas/backbone';
 	//toolbarView.onChangeRepo();
-	issues.setRepo('jashkenas/backbone');
+	issues.setRepo(
+		'jashkenas/backbone'
+		//'mgiulio/mgiulio.github.io'
+	);
 }
