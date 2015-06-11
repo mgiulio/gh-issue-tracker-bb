@@ -1,25 +1,24 @@
-'use strict';
-
 var ToolbarView = Backbone.View.extend({
-
+	
 	el: '#toolbar',
 
-	initialize: function initialize() {},
+	initialize: function() {
+	},
 
-	render: function render() {
+	render: function() {
 		return this;
 	},
-
+	
 	events: {
-		'change .repo': 'onChangeRepo'
+		'change .repo': 'onChangeRepo',
 	},
-
-	onChangeRepo: function onChangeRepo(e) {
+	
+	onChangeRepo: function(e) {
 		var repoName = e.currentTarget.value;
-
+		
 		/* if (!this.validRepoName(repoName))
-  	return; */
-
+			return; */
+		
 		issues.setRepo(repoName);
 	}
 

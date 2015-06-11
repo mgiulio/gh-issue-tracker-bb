@@ -1,8 +1,8 @@
-var Issue = (function() {
+"use strict";
 
-	var Model = Backbone.Model.extend({
-	});
-	
+var Issue = (function () {
+
+	var Model = Backbone.Model.extend({});
+
 	return Model;
-
 })();
